@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIZAEV.ORG</title>
+<style>
+    table.content { width: 550px; max-width: 92vw; }
+    img.photo { width: 400px; max-width: 80vw; height: auto; }
+    iframe.player { width: 500px; max-width: 92vw; height: 380px; }
+    .lang-switch a { text-decoration: none; }
+    .lang-switch a.active { text-decoration: underline; }
+    .lang-block { display: none; }
+    .lang-block.active { display: block; }
+</style>
+<script>
+    function setLang(lang) {
+        var ru = document.getElementsByClassName('lang-ru');
+        var en = document.getElementsByClassName('lang-en');
+        for (var i = 0; i < ru.length; i++) { ru[i].className = ru[i].className.replace(' active', ''); }
+        for (var i = 0; i < en.length; i++) { en[i].className = en[i].className.replace(' active', ''); }
+        var target = document.getElementsByClassName('lang-' + lang);
+        for (var i = 0; i < target.length; i++) { target[i].className += ' active'; }
+
+        var linkRu = document.getElementById('switch-ru');
+        var linkEn = document.getElementById('switch-en');
+        linkRu.className = (lang === 'ru') ? 'active' : '';
+        linkEn.className = (lang === 'en') ? 'active' : '';
+
+        document.documentElement.lang = (lang === 'ru') ? 'ru' : 'en';
+    }
+    window.onload = function () { setLang('ru'); };
+</script>
+</head>
+<body bgcolor="#c0c0c0" text="#000000" link="#0000ee" vlink="#551a8b">
+
+<center>
+    <br><br>
+
+    <font face="Arial, Helvetica, sans-serif" size="2" class="lang-switch">
+        <a href="#" id="switch-ru" onclick="setLang('ru'); return false;">RU</a>
+        &nbsp;|&nbsp;
+        <a href="#" id="switch-en" onclick="setLang('en'); return false;">EN</a>
+    </font>
+
+    <br><br>
+
+    <table border="5" cellspacing="0" cellpadding="0" bgcolor="#000000">
+        <tbody><tr>
+            <td>
+                <img class="photo" src="photo.jpg" alt="Nizaev" border="0" style="display: block;">
+            </td>
+        </tr>
+    </tbody></table>
+
+    <br><br>
+    <hr class="content" size="3" color="#808080">
+    <br>
+
+    <font face="Times New Roman, Times, serif" size="5">
+        <span class="lang-block lang-ru"><i><b>«Свобода — это право быть исключением»</b></i></span>
+        <span class="lang-block lang-en"><i><b>&laquo;Freedom is the right to be an exception&raquo;</b></i></span>
+    </font>
+
+    <br><br>
+    <hr class="content" size="3" color="#808080">
+    <br><br>
+
+    <font face="Times New Roman, Times, serif" size="5">
+        <span class="lang-block lang-ru"><i><b>Гений маркетинга и<font size="6">.</font></b></i></span>
+        <span class="lang-block lang-en"><i><b>Marketing genius and<font size="6">.</font></b></i></span>
+    </font>
+
+    <br><br>
+    <hr class="content" size="3" color="#808080">
+    <br><br>
+
+    <font face="Arial, Helvetica, sans-serif" size="3" color="#000000">
+        <b><span class="lang-block lang-ru">ЭФИР</span><span class="lang-block lang-en">ON AIR</span></b>
+    </font>
+    <br><br>
+
+    <iframe class="player" width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay" src="https://soundcloud.com"></iframe>
+
+    <br><br>
+    <hr class="content" size="3" color="#808080">
+    <br><br>
+
+    <font face="Arial, Helvetica, sans-serif" size="1" color="#555555">
+        © NIZAEV.ORG
+    </font>
+
+    <br><br>
+</center>
+
+</body></html>
