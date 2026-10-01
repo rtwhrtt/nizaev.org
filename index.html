@@ -7,11 +7,23 @@
         body {
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" width="4" height="4" viewBox="0 0 4 4"><rect width="4" height="4" fill="%23000080"/><circle cx="2" cy="2" r="1" fill="%23000066"/></svg>');
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" width="32" height="32" viewBox="0 0 32 32"><path d="M0,0 L0,21 L5.5,15.5 L10,25 L14,23 L9.5,13.5 L16,13.5 Z" fill="white" stroke="black" stroke-width="2" stroke-linejoin="miter"/></svg>'), default;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
         .page-container {
             width: 100%;
             max-width: 600px;
-            margin: 0 auto;
+        }
+        .photo-frame {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            display: block;
         }
     </style>
 </head>
@@ -19,7 +31,6 @@
 
 <div class="page-container">
 <center>
-    <br><br><br>
     
     <marquee width="400" scrollamount="4" bgcolor="#ff0000">
         <font face="Impact, Arial Black, sans-serif" size="3" color="#ffffff">
@@ -32,7 +43,7 @@
     <table border="4" cellspacing="0" cellpadding="0" bgcolor="#000000" bordercolor="#ff0000">
         <tr>
             <td>
-                <img src="photo.jpg" alt="photo" width="300" height="300" border="0">
+                <img src="photo.jpg" alt="photo" class="photo-frame" border="0">
             </td>
         </tr>
     </table>
@@ -69,15 +80,9 @@
         </tr>
     </table>
 
-    <br><br><br>
-
-    <font face="Arial, Helvetica, sans-serif" size="2" color="#ffffff">
-        Last updated: October 1, 2026
-    </font>
-
-    <br><br><br>
 </center>
 </div>
 
 </body>
 </html>
+
